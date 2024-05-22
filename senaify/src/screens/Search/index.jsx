@@ -60,7 +60,7 @@ const Search = ({ token, atual, audio, setAtual, setAudio }) => {
       locations={[0, 0.365, 0.7, 1]}
     >
       <Container>
-        <ContainerBody>
+        <ContainerBody showsVerticalScrollIndicator={false}>
           <SubTitle>Procure sua música favorita</SubTitle>
 
           <ContainerInput>
@@ -81,7 +81,7 @@ const Search = ({ token, atual, audio, setAtual, setAudio }) => {
             data={ lista }
             renderItem={ ({ item }) => (
               <Music
-              label="music-item"
+                label="music-item"
                 play={ atual == item.preview_url }
                 onPress={() => playSound(item.preview_url, atual, setAtual, audio, setAudio)}
                 // onPress={() => playSound(item.preview_url) }
